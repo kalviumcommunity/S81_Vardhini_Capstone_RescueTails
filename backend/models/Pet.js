@@ -6,7 +6,11 @@
     breed: String,
     description: String,
     image: String,
-    adopted: { type: Boolean, default: false }
+    adopted: { type: Boolean, default: false },
+    user:{
+      type:mongoose.Schema.Types.ObjectId,
+      ref:"User"
+    }
   });
 
   module.exports = mongoose.model('Pet', petSchema);
