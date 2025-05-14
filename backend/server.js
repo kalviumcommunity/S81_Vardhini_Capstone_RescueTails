@@ -8,9 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 
-const connect=mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+  const connect=mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 
 const petRoutes = require('./routes/pets');
